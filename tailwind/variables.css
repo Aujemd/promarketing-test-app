@@ -1,0 +1,11 @@
+:root {
+  --primary:#091B50;
+  --primary-hover: #3C4D82;
+  --primary-outlined-hover: #E0E4EF;
+  --accent: #FBBF24;
+  --accent-hover: #FFCA1C;
+  --accent-outlined-hover: #F7F3E3;
+  --neutral-gray-light:#E8E8E8;
+  --neutral-gray-dark: #909090;
+}
+

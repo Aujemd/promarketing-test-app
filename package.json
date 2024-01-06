@@ -7,10 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "storybook": "storybook dev -p 6006",
+    "storybook": "npm run tailwind:dev && storybook dev -p 6006",
     "build-storybook": "storybook build",
     "prepare": "husky install",
-    "test": ""
+    "test": "",
+    "tailwind:dev": "rimraf ./src/index.css && tailwindcss -i ./tailwind/tailwind.css -s -o ./src/index.css"
   },
   "dependencies": {
     "next": "14.0.4",
