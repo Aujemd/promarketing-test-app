@@ -47,7 +47,8 @@ export const Contained: Story = {
     label: 'Button',
     buttonType: AtButtonType.CONTAINED,
     dataTestId: 'test',
-    ariaLabel: 'test-button'
+    ariaLabel: 'test-button',
+    className: 'tw-px-8 tw-py-4'
   }
 }
 

@@ -23,7 +23,7 @@ export const AtButton = React.forwardRef(
       className,
       variant = AtButtonVariant.PRIMARY,
       icon,
-      buttonType = AtButtonType.ONLY_ICON,
+      buttonType = AtButtonType.CONTAINED,
       labelClassName,
       handleClick,
       disabled = false,
@@ -50,7 +50,7 @@ export const AtButton = React.forwardRef(
       <button
         {...props}
         disabled={disabled}
-        className={`  ${AtButtonBaseClasses} ${getButtonVariantClasses(variant, buttonType)} ${
+        className={`${AtButtonBaseClasses} ${getButtonVariantClasses(variant, buttonType)} ${
           className ?? ''
         } `}
         ref={ref}

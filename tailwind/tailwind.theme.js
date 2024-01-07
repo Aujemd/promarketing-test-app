@@ -9,7 +9,9 @@ const customTheme = {
       accent: {
         DEFAULT: 'var(--accent)',
         HOVER: 'var(--accent-hover)',
-        'outlined-hover': 'var(--accent-outlined-hover)'
+        'outlined-hover': 'var(--accent-outlined-hover)',
+        '/60': 'var(--accent-60)',
+        '/20': 'var(--accent-20)'
       },
       neutral: {
         'gray-light': 'var(--neutral-gray-light)',

@@ -3,9 +3,9 @@ import { AtButtonType, AtButtonVariant } from './types'
 export const AtButtonBaseClasses: string =
   ' tw-rounded-xl tw-inline-flex tw-justify-center tw-items-center tw-gap-[6px] disabled:tw-bg-neutral-gray-light disabled:tw-pointer-events-none'
 
-export const AtButtonLabelBaseClasses = 'tw-uppercase tw-font-bold tw-text-xl tw-leading-6'
+export const AtButtonLabelBaseClasses: string = 'tw-uppercase tw-font-bold tw-text-xl tw-leading-6'
 
-export const AtButtonLabelDisabledClasses = 'tw-text-neutral-gray-dark'
+export const AtButtonLabelDisabledClasses: string = 'tw-text-neutral-gray-dark'
 
 export const AtButtonIconClasses: Record<AtButtonType, string> = {
   [AtButtonType.OUTLINED]: 'tw-hidden',
@@ -24,7 +24,6 @@ export const AtButtonLabelClasses: Record<AtButtonType, string> = {
 }
 
 export const getButtonVariantClasses = (variant: AtButtonVariant, type: AtButtonType): string => {
-
   const isOutlined: boolean = type === AtButtonType.OUTLINED ?? false
 
   switch (variant) {
