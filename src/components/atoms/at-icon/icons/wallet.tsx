@@ -1,3 +1,4 @@
+//* React Utilities
 import React from 'react'
 
 export const Wallet = (props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) => (

@@ -1,5 +1,8 @@
 //* React Utilities
-import React, { useCallback, useState } from 'react'
+import React, { useCallback } from 'react'
+//* Components
+import { AtIcon } from '../at-icon'
+
 //* Types
 import { AtButtonProps, AtButtonType, AtButtonVariant } from './types'
 //** Styles
@@ -11,7 +14,6 @@ import {
   AtButtonLabelDisabledClasses,
   getButtonVariantClasses
 } from './classes'
-import { AtIcon } from '../at-icon'
 
 // eslint-disable-next-line react/display-name
 export const AtButton = React.forwardRef(
@@ -31,6 +33,7 @@ export const AtButton = React.forwardRef(
     }: AtButtonProps,
     ref: React.LegacyRef<HTMLButtonElement> | undefined
   ) => {
+
     const getIconElement = useCallback(() => {
       if (icon) {
         return (

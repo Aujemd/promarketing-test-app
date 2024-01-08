@@ -1,5 +1,5 @@
 export const CardContainerClasses: string =
-  'tw-relative tw-w-[129px]  tw-min-h-[120px] tw-rounded-lg md:tw-w-[249px] md:tw-min-h-[200px]'
+  'tw-relative tw-min-h-[120px] tw-rounded-lg md:tw-min-h-[200px] '
 
 export const CardIconsClasses: string = 'tw-absolute tw-z-50 tw-right-[10px] md:tw-w-6 md:tw-h-6'
 

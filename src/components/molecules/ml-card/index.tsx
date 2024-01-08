@@ -1,5 +1,5 @@
 //* React Utilities
-import React, { useState, useMemo } from 'react'
+import React from 'react'
 //* Next Utilities
 import Image from 'next/image'
 //* Types
@@ -17,6 +17,7 @@ import {
   CardOverlayClasses,
   CardStatsClasses
 } from './classes'
+//* Hooks
 import { useCard } from './useCard'
 
 export const MlCard = ({
@@ -24,7 +25,9 @@ export const MlCard = ({
   supplier = AtCardLabelSupplier.EVOPLAY,
   info,
   name,
-  disabled = false
+  disabled = false,
+  className,
+  ...props
 }: MlCardProps) => {
   //* State
   const { setIsHovered, showInfo, setShowInfo, giftIcon, exclamationIcon } = useCard()
@@ -32,9 +35,12 @@ export const MlCard = ({
   return (
     <>
       <div
-        className={`${disabled ? 'tw-pointer-events-none' : ''} ${CardContainerClasses}`}
+        className={`${
+          disabled ? 'tw-pointer-events-none' : ''
+        } ${CardContainerClasses} ${className}`}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
+        {...props}
       >
         [//* Card Icons]
         {!disabled && (
@@ -69,7 +75,7 @@ export const MlCard = ({
           ${disabled ? 'tw-opacity-100' : ''}
           `}
         >
-          {name && !showInfo && (
+          {name && !showInfo && !disabled && (
             <p className='tw-invisible md:tw-visible tw-bottom-[18px] tw-left-[10px] tw-absolute tw-text-white  tw-text-base  tw-leading-4 tw-font-bold'>
               {name}
             </p>
@@ -114,11 +120,14 @@ export const MlCard = ({
           priority
           className='tw-rounded-lg'
           src={src ?? ''}
+          sizes='(max-width: 768px) 260w, 130w'
           alt='Card'
           fill
           style={{
             objectFit: 'cover'
           }}
+          placeholder='blur'
+          blurDataURL='https://cdn.wcbackoffice.com/winchile/providers/habanero/normal/SGBikiniIslandDeluxe.jpeg'
         />
       </div>
     </>

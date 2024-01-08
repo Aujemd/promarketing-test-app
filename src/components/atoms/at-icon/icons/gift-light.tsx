@@ -1,3 +1,4 @@
+//* React Utilities
 import React from 'react'
 
 export const GiftLight = (props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) => (
@@ -10,8 +11,8 @@ export const GiftLight = (props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVG
     xmlnsXlink='http://www.w3.org/1999/xlink'
     {...props}
   >
-    <g clip-path='url(#clip0_1_1379)'>
-      <rect width='24' height='24' rx='6' fill='#FBBF24' fill-opacity='0.2' />
+    <g clipPath='url(#clip0_1_1379)'>
+      <rect width='24' height='24' rx='6' fill='#FBBF24' fillOpacity='0.2' />
       <g filter='url(#filter0_d_1_1379)'>
         <rect
           x='4'
@@ -19,7 +20,7 @@ export const GiftLight = (props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVG
           width='16'
           height='16'
           fill='url(#pattern0)'
-          shape-rendering='crispEdges'
+          shapeRendering='crispEdges'
         />
       </g>
     </g>
@@ -31,9 +32,9 @@ export const GiftLight = (props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVG
         width='56'
         height='56'
         filterUnits='userSpaceOnUse'
-        color-interpolation-filters='sRGB'
+        colorInterpolationFilters='sRGB'
       >
-        <feFlood flood-opacity='0' result='BackgroundImageFix' />
+        <feFlood floodOpacity='0' result='BackgroundImageFix' />
         <feColorMatrix
           in='SourceAlpha'
           type='matrix'

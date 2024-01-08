@@ -1,10 +1,9 @@
 //* React utilities
-import { Dispatch, SetStateAction } from 'react'
+import React, { Dispatch, SetStateAction } from 'react'
 //* Types
 import { IconType } from '../../atoms/at-icon/types'
 
-export interface MlCardProps {
-  id?: number
+export interface MlCardProps extends React.HTMLAttributes<HTMLDivElement> {
   disabled?: boolean
   info?: MlCardInfo
   name?: string

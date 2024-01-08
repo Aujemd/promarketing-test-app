@@ -12,13 +12,13 @@ export const AtCardLabel = ({
   containerClassName,
   className
 }: AtCardLabelProps) => {
-  const {  md, sm } = getSupplierImg(supplier)
+  const { md, sm } = getSupplierImg(supplier)
   return (
     // eslint-disable-next-line @next/next/no-img-element
     <div className={`${containerClassName}`}>
       {md?.src && (
         <Image
-          className={`${className} tw-hidden md:tw-inline-block tw-rounded-md`}
+          className={`${className} tw-hidden md:tw-inline-block tw-rounded-md  tw-w-[75px] tw-h-5`}
           alt='Supplier md'
           src={md?.src}
           width={75}
@@ -27,7 +27,7 @@ export const AtCardLabel = ({
       )}
       {sm?.src && (
         <Image
-          className={`${className} md:tw-hidden tw-rounded-md`}
+          className={`${className} md:tw-hidden tw-rounded-md  tw-w-5 tw-h-5`}
           alt='Supplier sm'
           src={sm?.src}
           width={20}

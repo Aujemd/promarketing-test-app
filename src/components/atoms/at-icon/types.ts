@@ -4,7 +4,7 @@ export enum IconType {
   'exclamation-dark' = 'exclamation-dark',
   'exclamation-light' = 'exclamation-light',
   'gift-light' = 'gift-light',
-  'gift-dark' = 'gift-dark'
+  'gift-dark' = 'gift-dark',
 }
 
 export interface AtIconProps extends React.SVGProps<SVGSVGElement> {

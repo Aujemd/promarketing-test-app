@@ -30,7 +30,7 @@ export const AtIcon = ({ type, dataTestId, ...props }: AtIconProps) => {
 
   if (icon) {
     return (
-      <div data-testid={`at-icon_${type}_${dataTestId}`}>
+      <div data-testid={`at-icon_${type}_${dataTestId}`} className='tw-w-fit tw-h-fit'>
         {icon({ width: 20, height: 20, ...props })}
       </div>
     )

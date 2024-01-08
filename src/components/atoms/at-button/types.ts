@@ -1,3 +1,4 @@
+//* Types
 import { IconType } from '../at-icon/types'
 
 export enum AtButtonType {

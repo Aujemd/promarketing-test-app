@@ -14,7 +14,7 @@ type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
   args: {
-    id: 3,
+    cardId: 3,
     disabled: false,
     info: {
       moodBonus: true,
@@ -23,6 +23,7 @@ export const Default: Story = {
     },
     name: ' Bikini Island Deluxe',
     src: 'https://cdn.wcbackoffice.com/winchile/providers/habanero/normal/SGBikiniIslandDeluxe.jpeg',
-    supplier: 'evoplay'
+    supplier: 'evoplay',
+    className: 'tw-max-w-[250px]'
   } as MlCardProps
 }

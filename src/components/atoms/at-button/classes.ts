@@ -1,3 +1,4 @@
+//* Types
 import { AtButtonType, AtButtonVariant } from './types'
 
 export const AtButtonBaseClasses: string =

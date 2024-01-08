@@ -1,7 +1,15 @@
+//* React Utilities
 import React from 'react'
 
 export const ExclamationDark = (props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>) => (
-  <svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg' {...props}>
+  <svg
+    width='24'
+    height='24'
+    viewBox='0 0 24 24'
+    fill='none'
+    xmlns='http://www.w3.org/2000/svg'
+    {...props}
+  >
     <rect width='24' height='24' rx='6' fill='#010101' fillOpacity='0.8' />
     <g clipPath='url(#clip0_1_1424)'>
       <path
