@@ -18,7 +18,8 @@ export const OnlyIcon: Story = {
     icon: IconType['wallet'],
     buttonType: AtButtonType.ONLY_ICON,
     dataTestId: 'test',
-    ariaLabel: 'test-button'
+    ariaLabel: 'test-button',
+    onClick: () => alert('clicked')
   }
 }
 

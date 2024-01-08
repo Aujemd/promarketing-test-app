@@ -1,3 +1,4 @@
+'use client'
 import { useMemo, useState } from 'react'
 import { useQuery } from '@tanstack/react-query'
 
@@ -14,7 +15,11 @@ export const useFilters = (): useFiltersReturnType => {
   // Data fetching using React Query
   const { isPending, error, data } = useQuery({
     queryKey: ['cardData'],
-    queryFn: () => fetch('https://demo8881327.mockable.io/promarketing').then((res) => res.json())
+    queryFn: () =>
+      fetch(process.env.NEXT_PUBLIC_API_URL || '').then((res) => {
+
+        return res.json()
+      })
   })
 
   // Timeout for handling search debounce

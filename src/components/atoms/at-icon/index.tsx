@@ -25,13 +25,13 @@ export const icons: Record<IconType, (props: React.SVGProps<SVGSVGElement>) => J
   'gift-light': (props) => <GiftLight role='img' {...props} />
 }
 
-export const AtIcon = ({ type, dataTestId, ...props }: AtIconProps) => {
+export const AtIcon = ({ type, dataTestId, className, ...props }: AtIconProps) => {
   const icon = icons[type]
 
   if (icon) {
     return (
-      <div data-testid={`at-icon_${type}_${dataTestId}`} className='tw-w-fit tw-h-fit'>
-        {icon({ width: 20, height: 20, ...props })}
+      <div data-testid={`${dataTestId}`}>
+        {icon({ width: 20, height: 20, className: `tw-w-fit tw-h-fit ${className} `, ...props })}
       </div>
     )
   }

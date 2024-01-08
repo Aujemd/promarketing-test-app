@@ -10,12 +10,13 @@ import { getSupplierImg } from './utils'
 export const AtCardLabel = ({
   supplier = AtCardLabelSupplier.EVOPLAY,
   containerClassName,
-  className
+  className,
+  dataTestId
 }: AtCardLabelProps) => {
   const { md, sm } = getSupplierImg(supplier)
   return (
     // eslint-disable-next-line @next/next/no-img-element
-    <div className={`${containerClassName}`}>
+    <div className={`${containerClassName}`} data-testid={dataTestId}>
       {md?.src && (
         <Image
           className={`${className} tw-hidden md:tw-inline-block tw-rounded-md  tw-w-[75px] tw-h-5`}

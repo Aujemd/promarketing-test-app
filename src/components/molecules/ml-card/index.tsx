@@ -27,6 +27,7 @@ export const MlCard = ({
   name,
   disabled = false,
   className,
+  dataTestId,
   ...props
 }: MlCardProps) => {
   //* State
@@ -40,16 +41,18 @@ export const MlCard = ({
         } ${CardContainerClasses} ${className}`}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
+        data-testid={dataTestId}
         {...props}
       >
-        [//* Card Icons]
         {!disabled && (
           <>
             <AtCardLabel
+              dataTestId={`${dataTestId}-at-card-label`}
               supplier={supplier as AtCardLabelSupplier}
               className='tw-absolute tw-z-50 tw-left-[10px] tw-top-[10px]'
             />
             <AtIcon
+              dataTestId={`${dataTestId}-at-icon-exclamation`}
               type={exclamationIcon}
               onClick={() => {
                 setShowInfo(!showInfo)
@@ -62,13 +65,13 @@ export const MlCard = ({
         )}
         {info?.moodBonus && !disabled && (
           <AtIcon
+            dataTestId={`${dataTestId}-at-icon-gift`}
             type={giftIcon}
             className={`tw-bottom-[6px] ${CardIconsClasses} ${
               showInfo ? 'tw-top-[10px]' : 'tw-bottom-[6px] md:tw-bottom-4'
             }`}
           />
         )}
-        [//* Card Overlay]
         <div
           className={`${CardOverlayClasses}
           ${showInfo ? 'tw-opacity-100 !tw-justify-end' : 'tw-opacity-0'}
@@ -98,6 +101,7 @@ export const MlCard = ({
           {!disabled && !showInfo && (
             <>
               <AtButton
+                dataTestId={`${dataTestId}-at-button-play`}
                 className='!tw-border-none !tw-px-[18px] !tw-py-2  tw-bg-accent-/60 !tw-rounded-lg'
                 label='Jugar Ahora'
                 variant={AtButtonVariant.ACCENT}
@@ -108,6 +112,7 @@ export const MlCard = ({
 
           {disabled && (
             <AtButton
+              dataTestId={`${dataTestId}-at-button-disabled`}
               disabled={disabled}
               className='!tw-border-none !tw-px-[18px] !tw-py-2 !tw-rounded-lg'
               label='No Disponible'
@@ -115,7 +120,6 @@ export const MlCard = ({
             />
           )}
         </div>
-        [//* Card Image]
         <Image
           priority
           className='tw-rounded-lg'

@@ -52,7 +52,7 @@ export default function Page() {
               type={IconType['chevron-down']}
               className={`tw-transition-all ${
                 orderAscendent ? 'tw-rotate-180' : ''
-              } tw-transition-all tw-duration-300  tw-ease-in-out`}
+              } tw-transition-all tw-duration-300  tw-ease-in-out tw-animate-pulse`}
             />
           </div>
 

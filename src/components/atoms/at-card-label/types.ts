@@ -1,5 +1,5 @@
 //* Next Utilities
-import { StaticImageData } from "next/image"
+import { StaticImageData } from 'next/image'
 
 export enum AtCardLabelSupplier {
   PLAYTECH = 'playtech',
@@ -8,10 +8,10 @@ export enum AtCardLabelSupplier {
   SPINOMENAL = 'spinomenal'
 }
 
-export interface AtCardLabelProps {
+export interface AtCardLabelProps extends React.HTMLAttributes<HTMLDivElement> {
   supplier: AtCardLabelSupplier
   containerClassName?: string
-  className?: string
+  dataTestId?: string
 }
 
 export type getSupplierImgReturnType = {

@@ -9,6 +9,7 @@ export interface MlCardProps extends React.HTMLAttributes<HTMLDivElement> {
   name?: string
   src?: string
   supplier?: string
+  dataTestId?: string
 }
 
 export interface MlCardInfo {

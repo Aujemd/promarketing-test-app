@@ -27,14 +27,12 @@ export const AtButton = React.forwardRef(
       icon,
       buttonType = AtButtonType.CONTAINED,
       labelClassName,
-      handleClick,
       disabled = false,
       ...props
     }: AtButtonProps,
     ref: React.LegacyRef<HTMLButtonElement> | undefined
   ) => {
-
-    const getIconElement = useCallback(() => {
+    const getIconElement = useCallback((): JSX.Element | null => {
       if (icon) {
         return (
           <div
@@ -42,7 +40,11 @@ export const AtButton = React.forwardRef(
               disabled ? AtButtonLabelDisabledClasses : ''
             }`}
           >
-            <AtIcon className={`tw-text-inherit `} dataTestId={dataTestId} type={icon} />
+            <AtIcon
+              className={`tw-text-inherit `}
+              dataTestId={`${dataTestId}-at-icon`}
+              type={icon}
+            />
           </div>
         )
       }
@@ -57,9 +59,8 @@ export const AtButton = React.forwardRef(
           className ?? ''
         } `}
         ref={ref}
-        data-testid={`at-button_${dataTestId}`}
+        data-testid={`${dataTestId}`}
         aria-label={ariaLabel ?? ''}
-        onClick={handleClick}
       >
         {label ? (
           <span
